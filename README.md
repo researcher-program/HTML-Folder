@@ -1,2 +1,3 @@
-# Js-Bangla4
-A code repo for javascript series
+# HTML Folder
+A code repo for HTML series and Projects.
+ 
