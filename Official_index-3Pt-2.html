@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFICIAL HTML_3 Pt-2 </title>
+</head>
+<body>
+   
+<h1 style="color: rgb(53, 54, 52);">60.Image Embed{img} Tag:</h1>
+
+<img
+  src="clock-demo-200px.png"
+  alt="The time is 12:45."
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(width <= 600px) 200px, 50vw" />
+
+<img
+  src="/shared-assets/images/examples/favicon72.png"
+  alt="MDN"
+  srcset="/shared-assets/images/examples/favicon144.png 2x" />
+
+  <a href="https://developer.mozilla.org">
+  <img
+    src="/shared-assets/images/examples/favicon144.png"
+    alt="Visit the MDN site" />
+</a>
+
+<img src="/shared-assets/images/examples/favicon144.png" alt="MDN" />
+
+<img src="mdn.svg" alt="MDN" role="img" />
+
+<!-- <img alt="image" src="penguin.jpg" /> -->
+
+<img alt="A Penguin on a beach." src="penguin.jpg" />
+
+<img
+  loading="lazy"
+  width="200"
+  height="200"
+  sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+  srcset="
+    swing-200.jpg   200w,
+    swing-400.jpg   400w,
+    swing-800.jpg   800w,
+    swing-1600.jpg 1600w
+  "
+  src="swing-400.jpg"
+  alt="Kettlebell Swing" />
+
+  <img
+  src="image-file.png"
+  alt="My image file description"
+  attributionsrc="https://a.example/register-source
+                     https://b.example/register-source" />
+
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+
+<style>
+  .fit-picture {
+  width: 250px;
+}
+</style>
+
+<h1 style="color: rgb(53, 54, 52);">61.Image Map{map} Tag:</h1>
+
+<!-- Photo by Juliana e Mariana Amorim on Unsplash -->
+<map name="primary">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    target="_blank"
+    alt="JavaScript" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    target="_blank"
+    alt="CSS" />
+</map>
+<img
+  usemap="#primary"
+  src="parrots.jpg"
+  alt="350 x 150 picture of two parrots" />
+
+  <map name="infographic">
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info2.png"
+  alt="MDN infographic" />
+  <style>
+    img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 232px;
+}
+  </style>
+
+<h1 style="color: rgb(53, 54, 52);">62.Embed Text Track{track} Tag:</h1>
+<video controls poster="/images/sample.gif">
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+  <!-- Fallback -->
+  …
+</video>
+<script>
+  let textTrackElem = document.getElementById("text-track");
+
+textTrackElem.addEventListener("cuechange", (event) => {
+  let cues = event.target.track.activeCues;
+});
+</script>
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Download the
+  <a href="/shared-assets/videos/friday.mp4">MP4</a>
+  video, and
+  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+<style>
+  video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+</style>
+
+
+<h1 style="color: rgb(53, 54, 52);">63.Video Embed{video} Tag:</h1>
+
+<!-- Using multiple sources as fallbacks for a video tag -->
+<!-- 'Elephants Dream' by Orange Open Movie Project Studio, licensed under CC-3.0, hosted by archive.org -->
+<!-- Poster hosted by Wikimedia -->
+<video
+  width="620"
+  controls
+  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
+  <source
+    src="https://archive.org/download/ElephantsDream/ed_hd.avi"
+    type="video/avi" />
+  <source
+    src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    type="video/mp4" />
+
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    download="ed_1024_512kb.mp4">
+    download the MP4
+  </a>
+  and watch it with your favorite video player!
+</video>
+
+<!-- Basic video example -->
+<!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
+<!-- Poster from peach.blender.org -->
+<video
+  controls
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
+  and watch it with your favorite video player!
+</video>
+
+<script>
+  const elem = document.querySelector("video");
+
+elem.audioTracks.onaddtrack = (event) => {
+  trackEditor.addTrack(event.track);
+};
+
+elem.audioTracks.onremovetrack = (event) => {
+  trackEditor.removeTrack(event.track);
+};
+</script>
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" />
+</video>
+
+<video controls>
+  <source src="myVideo.webm" type="video/webm" />
+  <source src="myVideo.mp4" type="video/mp4" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
+  </p>
+</video>
+
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+
+
+<h1 style="color: rgb(53, 54, 52);">64.Embed External Content{embed} Tag:</h1>
+
+<embed
+  type="video/quicktime"
+  src="movie.mov"
+  width="640"
+  height="480"
+  title="Title of my video" />
+
+  <embed
+  type="image/jpeg"
+  src="/shared-assets/images/examples/flowers.jpg"
+  width="250"
+  height="200" />
+
+<h1 style="color: rgb(53, 54, 52);">65.Fenced Frame{fencedframe} Tag:</h1>
+
+<fencedframe width="640" height="320"></fencedframe>
+<script>
+  const frameConfig = await navigator.runAdAuction({
+  // … auction configuration
+  resolveToConfig: true,
+});
+
+const frame = document.querySelector("fencedframe");
+frame.config = frameConfig;
+</script>
+
+<fencedframe
+  title="Advertisement for new Log. From Blammo!"
+  width="640"
+  height="320"></fencedframe>
+
+<h1 style="color: rgb(53, 54, 52);">66.Inline Frame{iframe} Tag:</h1>
+
+<article>
+  <footer>Nine minutes ago, <i>jc</i> wrote:</footer>
+  <iframe
+    sandbox
+    srcdoc="<p>There are two ways to use the <code>iframe</code> element:</p>
+<ol>
+<li><a href=&quot;about:srcdoc#embed_another&quot;>To embed content from another page</a></li>
+<li><a href=&quot;about:srcdoc#embed_user&quot;>To embed user-generated content</a></li>
+</ol>
+<h2 id=&quot;embed_another&quot;>Embedding content from another page</h2>
+<p>Use the <code>src</code> attribute to specify the URL of the page to embed:</p>
+<pre><code>&amp;lt;iframe src=&quot;https://example.org&quot;&amp;gt;&amp;lt;/iframe&amp;gt;</code></pre>
+<h2 id=&quot;embed_user&quot;>Embedding user-generated content</h2>
+<p>Use the <code>srcdoc</code> attribute to specify the content to embed. This post is already an example!</p>
+"
+    width="500"
+    height="250"
+></iframe>
+</article>
+
+<iframe
+  src="https://example.org"
+  title="iframe Example 1"
+  width="400"
+  height="300">
+</iframe>
+
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+
+  <iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+
+<style>
+  iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+</style>
+
+<h1 style="color: rgb(53, 54, 52);">67.External Object{object} Tag:</h1>
+
+<object
+  type="video/webm"
+  data="/shared-assets/videos/flower.webm"
+  width="600"
+  height="140">
+  <img
+    src="/shared-assets/images/examples/flowers.jpg"
+    alt="Some beautiful flowers" />
+</object>
+
+<object
+  type="video/mp4"
+  data="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200"></object>
+
+<h1 style="color: rgb(53, 54, 52);">68.Picture{track} Tag:</h1>
+
+<picture>
+  <source srcset="photo.avif" type="image/avif" />
+  <source srcset="photo.webp" type="image/webp" />
+  <img src="photo.jpg" alt="photo" />
+</picture>
+
+<picture>
+  <source
+    srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+    sizes="(max-width: 600px) 400px, 800px"
+    type="image/jpeg" />
+  <img src="fallback.jpg" alt="Example image" />
+</picture>
+
+<img
+  srcset="logo.png, logo-2x.png 2x"
+  src="logo.png"
+  height="320"
+  width="320"
+  alt="MDN Web Docs logo" />
+
+  <picture>
+  <source srcset="logo.png, logo-1.5x.png 1.5x" />
+  <img src="logo.png" alt="MDN Web Docs logo" height="320" width="320" />
+</picture>
+
+<picture>
+  <source srcset="mdn-logo-wide.png" media="(width >= 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
+</picture>
+
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+
+<h1 style="color: rgb(53, 54, 52);">69.Media or Image Source{source} Tag:</h1>
+
+<picture>
+  <source
+    srcset="landscape.png"
+    media="(width >= 1000px)"
+    width="1000"
+    height="400" />
+  <source
+    srcset="square.png"
+    media="(width >= 800px)"
+    width="800"
+    height="800" />
+  <source
+    srcset="portrait.png"
+    media="(width >= 600px)"
+    width="600"
+    height="800" />
+  <img
+    src="fallback.png"
+    alt="Image used when the browser does not support the sources"
+    width="500"
+    height="400" />
+</picture>
+
+<picture>
+  <source srcset="mdn-logo-wide.png" media="(width >= 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(width >= 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
+</picture>
+
+<video controls>
+  <source src="foo-large.webm" media="(width >= 800px)" />
+  <source src="foo.webm" />
+  I'm sorry; your browser doesn't support HTML video.
+</video>
+
+<video controls>
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
+  I'm sorry; your browser doesn't support HTML video.
+</video>
+
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+
+<h1 style="color: rgb(53, 54, 52);">70.Graphics Canvas {canvas} Tag:</h1>
+
+<canvas width="120" height="120">
+  An alternative text describing what your canvas displays.
+</canvas>
+<script>
+  const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
+// Add a rectangle at (10, 10) with size 100x100 pixels
+ctx.fillRect(10, 10, 100, 100);
+</script>
+
+<h1 style="color: rgb(53, 54, 52);">71.Deleted Text{del} Tag:</h1>
+
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+<del><p>This paragraph has been deleted.</p></del>
+
+<style>
+  del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+</style>
+
+<style>
+  del {
+  text-decoration: line-through;
+  background-color: #ffbbbb;
+  color: #555555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+</style>
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+
+<h1 style="color: rgb(53, 54, 52);">72.Inserted Text{ins} Tag:</h1>
+
+<ins>This text has been inserted</ins>
+<style>
+  ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+</style>
+
+<style>
+  del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #ffbbbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+</style>
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../how-to-be-a-wizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+
+<h1 style="color: rgb(53, 54, 52);">73.Details Disclosure{detail} Tag:</h1>
+
+<details>
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+
+<style>
+  details {
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #dddddd;
+  border: none;
+  box-shadow: 3px 3px 4px black;
+  cursor: pointer;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #dddddd;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
+
+details:open > summary {
+  background-color: #ccccff;
+}
+</style>
+
+<details name="requirements">
+  <summary>Graduation Requirements</summary>
+  <p>
+    Requires 40 credits, including a passing grade in health, geography,
+    history, economics, and wood shop.
+  </p>
+</details>
+<details name="requirements">
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+<details name="requirements">
+  <summary>Job Requirements</summary>
+  <p>
+    Requires knowledge of HTML, CSS, JavaScript, accessibility, web performance,
+    privacy, security, and internationalization, as well as a dislike of
+    broccoli.
+  </p>
+</details>
+
+<details open>
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+
+<details>
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+
+<script>
+  details.addEventListener("toggle", (event) => {
+  if (details.open) {
+    /* the element was toggled open */
+  } else {
+    /* the element was toggled closed */
+  }
+});
+</script>
+
+<style>
+  details {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaaaaa;
+  margin-bottom: 0.5em;
+}
+</style>
+
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+
+
+<h1 style="color: rgb(53, 54, 52);">74.Dialog{dialog} Tag:</h1>
+<script>
+
+// const dialogElem = document.getElementById("dialog");
+// const showBtn = document.querySelector(".show");
+// const closeBtn = document.querySelector(".close");
+
+showBtn.addEventListener("click", () => {
+  dialogElem.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  dialogElem.close();
+});
+</script>
+<style>
+  dialog {
+  animation: fade-out 0.7s ease-out;
+}
+
+dialog:open {
+  animation: fade-in 0.7s ease-out;
+}
+
+dialog:open::backdrop {
+  background-color: black;
+  animation: backdrop-fade-in 0.7s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+    display: none;
+  }
+}
+
+@keyframes backdrop-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+body,
+button {
+  font-family: system-ui;
+}
+</style>
+
+<dialog id="dialog">
+  Content here
+  <button class="close">close</button>
+</dialog>
+
+<button class="show">Show Modal</button>
+
+<script>
+const dialogElem = document.getElementById("dialog");
+// const showBtn = document.querySelector(".show");
+const closeBtn = document.querySelector(".close");
+
+showBtn.addEventListener("click", () => {
+  dialogElem.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  dialogElem.close();
+});
+</script>
+
+<style>
+  /* Open state of the dialog  */
+dialog:open {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* Closed state of the dialog   */
+dialog {
+  opacity: 0;
+  transform: scaleY(0);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    overlay 0.7s ease-out allow-discrete,
+    display 0.7s ease-out allow-discrete;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect,
+    as the specificity is the same */
+@starting-style {
+  dialog:open {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+  background-color: transparent;
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    background-color 0.7s;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+dialog:open::backdrop {
+  background-color: rgb(0 0 0 / 25%);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
+@starting-style {
+  dialog:open::backdrop {
+    background-color: transparent;
+  }
+}
+</style>
+
+<dialog id="dialog">
+  Content here
+  <button class="close">close</button>
+</dialog>
+
+<button class="show">Show Modal</button>
+
+<script>
+  const noneBtn = document.getElementById("none-btn");
+const closerequestBtn = document.getElementById("closerequest-btn");
+const anyBtn = document.getElementById("any-btn");
+
+const noneDialog = document.querySelector("[closedby='none']");
+const closerequestDialog = document.querySelector("[closedby='closerequest']");
+const anyDialog = document.querySelector("[closedby='any']");
+
+const closeBtns = document.querySelectorAll(".close");
+
+noneBtn.addEventListener("click", () => {
+  noneDialog.showModal();
+});
+
+closerequestBtn.addEventListener("click", () => {
+  closerequestDialog.showModal();
+});
+
+anyBtn.addEventListener("click", () => {
+  anyDialog.showModal();
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+  });
+});
+</script>
+
+<p>Choose a <code>&lt;dialog&gt;</code> type to show:</p>
+<div id="controls">
+  <button id="none-btn"><code>closedby="none"</code></button>
+  <button id="closerequest-btn">
+    <code>closedby="closerequest"</code>
+  </button>
+  <button id="any-btn"><code>closedby="any"</code></button>
+</div>
+
+<dialog closedby="none">
+  <h2><code>closedby="none"</code></h2>
+  <p>
+    Only closable using a specific provided mechanism, which in this case is
+    pressing the "Close" button below.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="closerequest">
+  <h2><code>closedby="closerequest"</code></h2>
+  <p>Closable using the "Close" button or the Esc key.</p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="any">
+  <h2><code>closedby="any"</code></h2>
+  <p>
+    Closable using the "Close" button, the Esc key, or by clicking outside the
+    dialog. "Light dismiss" behavior.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+
+<script>
+  // const showBtn = document.getElementById("show-dialog");
+// const dialog = document.getElementById("dialog");
+const jsCloseBtn = dialog.querySelector("#js-close");
+
+showBtn.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+jsCloseBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  dialog.close();
+});
+</script>
+
+<dialog id="dialog">
+  <form method="dialog">
+    <p>
+      <label>
+        Favorite animal:
+        <input type="text" required />
+      </label>
+    </p>
+    <div>
+      <input type="submit" id="normal-close" value="Normal close" />
+      <input
+        type="submit"
+        id="novalidate-close"
+        value="Novalidate close"
+        formnovalidate />
+      <input type="submit" id="js-close" value="JS close" />
+    </div>
+  </form>
+</dialog>
+<p>
+  <button id="show-dialog">Show the dialog</button>
+</p>
+<output></output>
+
+<script>
+  // const showButton = document.getElementById("showDialog");
+const favDialog = document.getElementById("favDialog");
+const outputBox = document.querySelector("output");
+const selectEl = favDialog.querySelector("select");
+const confirmBtn = favDialog.querySelector("#confirmBtn");
+
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener("click", () => {
+  favDialog.showModal();
+});
+
+// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
+favDialog.addEventListener("close", (e) => {
+  outputBox.value =
+    favDialog.returnValue === "default"
+      ? "No return value."
+      : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+});
+
+// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+confirmBtn.addEventListener("click", (event) => {
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(selectEl.value); // Have to send the select box value here.
+});
+</script>
+
+<!-- A modal dialog containing a form -->
+<dialog id="favDialog">
+  <form>
+    <p>
+      <label>
+        Favorite animal:
+        <select>
+          <option value="default">Choose…</option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </label>
+    </p>
+    <div>
+      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </div>
+  </form>
+</dialog>
+<p>
+  <button id="showDialog">Show the dialog</button>
+</p>
+<output></output>
+
+<script>
+  const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+</script>
+
+<style>
+  ::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+</style>
+<dialog>
+  <button autofocus>Close</button>
+  <p>This modal dialog has a groovy backdrop!</p>
+</dialog>
+<button>Show the dialog</button>
+
+<dialog open>
+  <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
+</dialog>
+
+<h1 style="color: rgb(53, 54, 52);">75.Disclosure Summary{summary} Tag:</h1>
+
+<h1>Quotes from Helen Keller</h1>
+
+<details>
+  <summary>On women's rights</summary>
+  <p>
+    <q>We have prayed, we have coaxed, we have begged, for the vote, with the
+      hope that men, out of chivalry, would bestow equal rights upon women and
+      take them into partnership in the affairs of the state. We hoped that
+      their common sense would triumph over prejudices and stupidity. We thought
+      their boasted sense of justice would overcome the errors that so often
+      fetter the human spirit; but we have always gone away empty-handed. We
+      shall beg no more.</q>
+  </p>
+</details>
+
+<details>
+  <summary>On optimism</summary>
+  <p>
+    <q>Optimism is the faith that leads to achievement; nothing can be done
+      without hope.</q>
+  </p>
+</details>
+
+<style>
+  details {
+  font-size: 1rem;
+  font-family: "Open Sans", Calibri, sans-serif;
+  border: solid;
+  padding: 2px 6px;
+  margin-bottom: 1em;
+}
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+  content: "+ ";
+  font-family: monospace;
+  color: red;
+  font-weight: bold;
+}
+
+details[open]:first-of-type summary::marker {
+  content: "− ";
+}
+
+details:last-of-type summary {
+  list-style: none;
+  &::after {
+    content: "+";
+    color: white;
+    background-color: darkgreen;
+    border-radius: 1em;
+    font-weight: bold;
+    padding: 0 5px;
+    margin-inline-start: 5px;
+  }
+  [open] &::after {
+    content: "−";
+  }
+}
+details:last-of-type summary::-webkit-details-marker {
+  display: none;
+}
+</style>
+
+<details open>
+  <summary><strong>Overview</strong></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+
+<details open>
+  <summary><h4>Overview</h4></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+
+<details open>
+  <summary>Overview</summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+<style>
+  details {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaaaaa;
+  margin-bottom: 0.5em;
+}
+</style>
+
+<h1 style="color: rgb(53, 54, 52);">76.Web Component Slot{slot} Tag:</h1>
+<template id="element-details-template">
+  <style>
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+      background: #217ac0;
+      color: white;
+      padding: 2px 6px;
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
+  </style>
+  <details>
+    <summary>
+      <code class="name">
+        &lt;<slot name="element-name">NEED NAME</slot>&gt;
+      </code>
+      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
+    </summary>
+    <div class="attributes">
+      <h4>Attributes</h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr />
+</template>
+
+<h1 style="color: rgb(53, 54, 52);">77.Table Caption{caption} Tag:</h1>
+
+<style>
+  caption {
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+</style>
+<table>
+  <caption>
+    User login email addresses
+  </caption>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>user1</td>
+    <td>user1@example.com</td>
+  </tr>
+  <tr>
+    <td>user2</td>
+    <td>user2@example.com</td>
+  </tr>
+</table>
+
+<table>
+  <caption>
+    He-Man and Skeletor facts
+  </caption>
+  <tr>
+    <td></td>
+    <th scope="col" class="heman">He-Man</th>
+    <th scope="col" class="skeletor">Skeletor</th>
+  </tr>
+  <tr>
+    <th scope="row">Role</th>
+    <td>Hero</td>
+    <td>Villain</td>
+  </tr>
+  <tr>
+    <th scope="row">Weapon</th>
+    <td>Power Sword</td>
+    <td>Havoc Staff</td>
+  </tr>
+  <tr>
+    <th scope="row">Dark secret</th>
+    <td>Expert florist</td>
+    <td>Cries at romcoms</td>
+  </tr>
+</table>
+<style>
+  caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th {
+  background-color: rgb(230 230 230);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250 250 250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(240 240 240);
+}
+
+.heman {
+  font:
+    1.4rem molot,
+    sans-serif;
+  text-shadow:
+    1px 1px 1px white,
+    2px 2px 1px black;
+}
+
+.skeletor {
+  font:
+    1.7rem rapscallion,
+    fantasy;
+  letter-spacing: 3px;
+  text-shadow:
+    1px 1px 0 white,
+    0 0 9px black;
+}
+</style>
+
+<h1 style="color: rgb(53, 54, 52);">78.Table Column{col} Tag:</h1>
+
+<style>
+  table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.weekdays {
+  background-color: #d7d9f2;
+}
+
+.weekend {
+  background-color: #ffe8d4;
+}
+</style>
+<table>
+  <caption>
+    Personal weekly activities
+  </caption>
+  <colgroup>
+    <col />
+    <col span="5" class="weekdays" />
+    <col span="2" class="weekend" />
+  </colgroup>
+  <tr>
+    <th>Period</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+  </tr>
+  <tr>
+    <th>a.m.</th>
+    <td>Clean room</td>
+    <td>Football training</td>
+    <td>Dance Course</td>
+    <td>History Class</td>
+    <td>Buy drinks</td>
+    <td>Study hour</td>
+    <td>Free time</td>
+  </tr>
+  <tr>
+    <th>p.m.</th>
+    <td>Yoga</td>
+    <td>Chess Club</td>
+    <td>Meet friends</td>
+    <td>Gymnastics</td>
+    <td>Birthday party</td>
+    <td>Fishing trip</td>
+    <td>Free time</td>
+  </tr>
+</table>
+
+<style>
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+</style>
+
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>
