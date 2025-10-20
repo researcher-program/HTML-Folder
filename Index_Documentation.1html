@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML~Anchor_Tag</title>
+</head>
+<body>
+  <h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~Anchor_Tag { All } </h1>
+
+  <div>
+    <h4>Anchor Tag Example :</h4>
+    <div>
+  attributionsrc="https://a.example/register-source
+https://b.example/register-source"
+</div>
+  </div>
+  <hr>
+
+    <style>
+        html {
+  /* font-family: sans-serif; */
+  font-family:cursive;
+}
+canvas {
+  background: rgb(148, 135, 135);
+  border: 4px double;
+  cursor: pointer;
+}
+a {
+  display:inline-block;
+  background: #6d95bd;
+  color: rgb(126, 76, 155);
+  padding:  5px 10px ;
+  border-radius: 0px 25px;
+
+}
+    </style>
+    
+    <p>
+  Paint by holding down the mouse button and moving it.
+  <a href="#" download="my_painting.png">Download My Painting</a>
+</p>
+
+<canvas width="500" height="350"></canvas>
+<canvas width="200" height="200"></canvas>
+
+<script>
+    const canvas = document.querySelector("canvas");
+const c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
+let isDrawing;
+
+function draw(x, y) {
+  if (isDrawing) {
+    c.beginPath();
+    c.arc(x, y, 10, 0, Math.PI * 2);
+    c.closePath();
+    c.fill();
+  }
+}
+
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
+);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
+
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
+</script>
+
+<br>
+<a href="tel:+49.157.0156">+49 157 0156</a>
+<br>
+<br>
+
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
+
+<br>
+<br>
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+
+
+<!-- <a> element links to the section below -->
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
+
+<!-- Heading to link to -->
+<!-- <h2 id="Section_further_down">Section further down</h2> -->
+
+<h2 id="Section_further_down">Section further down, <br>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, voluptates doloremque libero hic nihil atque dolorum nobis! Ipsa, placeat natus.</h2>
+
+<a href="//example.com">Scheme-relative URL</a>
+<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="p">Directory-relative URL</a>
+<a href="./p">Directory-relative URL</a>
+<a href="../p">Parent-directory-relative URL</a>
+<a href="https://www.mozilla.com">Mozilla</a>
+
+
+<style>
+  .skip-link {
+  position: absolute;
+  top: -3em;
+  background: white;
+}
+.skip-link:focus {
+  top: 0;
+}
+</style>
+<a href="#content" class="skip-link">Skip to main content</a>
+
+  <header>...........................</header>
+
+  <!-- The skip link jumps to here -->
+  <main id="content"></main>
+
+  <a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia (opens in new tab)
+</a>
+
+<div>
+  <p>Learn more about our products <a href="/products">here</a>.</p> <!-- This is Wrong -->
+
+  <p>Learn more <a href="/products">about our products</a>.</p><!-- This is Right -->
+</div>
+
+<br>
+<br />
+
+<div>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="new-tab.svg" width="14" alt="(Opens in new tab)" />
+  </a> <br>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="powerpoint.svg" width="14" alt="(PowerPoint file)" />
+  </a>
+</p>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="missing-icon.svg" width="14" alt="(Opens in new tab)" />
+  </a> <br> 
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="missing-icon.svg" width="14" alt="(PowerPoint file)" />
+  </a>
+</p>
+</div>
+
+
+<style>
+        li {
+  margin-bottom: 0.6rem;
+}
+    </style>
+    <p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+
+</body>
+</html>
