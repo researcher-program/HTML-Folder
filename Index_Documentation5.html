@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML~Aide_And_Audio_Tag</title>
+</head>
+<body>
+ 
+  <h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~The Aside Element_Tag { All } </h1>
+
+  <p>
+    The <mark> "aside"</mark> <u> HTML </u>  element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out
+  </p>
+  
+  <div>
+
+<article>
+  <p>
+    The Disney movie <cite>The Little Mermaid</cite> was first released to
+    theatres in 1989.
+  </p>
+  <aside>
+    <p>The movie earned $87 million during its initial release.</p>
+  </aside>
+  <p>More info about the movie…</p>
+</article>
+
+  </div>
+
+<div>
+  <p>
+  Salamanders are a group of amphibians with a lizard-like appearance, including
+  short legs and a tail in both larval and adult forms.
+</p>
+
+<aside>
+  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+</aside>
+
+<p>
+  Several species of salamander inhabit the temperate rainforest of the Pacific
+  Northwest, including the Ensatina, the Northwestern Salamander and the
+  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
+  worms and other small creatures.
+</p>
+<style>
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float:right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside > p {
+  margin: 0.5rem;
+}
+</style>
+</div>
+  
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~The Embed Audio Element_Tag { All } </h1>
+<p>
+  The <mark> " audio " </mark> <u> HTML  </u> element element is used to embed sound content in documents. It may contain one or more audio sources, represented using the <mark> src </mark> attribute or the <mark><u> source </u></mark> element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a <mark><u> MediaStream </u></mark>.
+</p>
+<div>
+  <figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+<style>
+  figure {
+  margin: 0;
+}
+
+</style>
+</div>
+
+<div>
+  <audio controls>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Download <a href="myAudio.mp3" download="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
+  </p>
+</audio>
+<script>
+  const audioElement = document.querySelector("audio");
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
+  .then((stream) => {
+    audioElement.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error("Error accessing the microphone", error);
+  });
+</script>
+</div>
+
+<div>
+  <script>
+  const elem = document.querySelector("audio");
+
+elem.audioTrackList.onaddtrack = (event) => {
+  trackEditor.addTrack(event.track);
+};
+
+elem.audioTrackList.onremovetrack = (event) => {
+  trackEditor.removeTrack(event.track);
+};
+</script>
+  <audio controls>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
+  </p>
+</audio>
+</div>
+
+<div>
+  <!-- Basic audio playback -->
+<audio src="AudioTest.ogg" autoplay>
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
+</audio>
+</div>
+<div>
+  <audio controls>
+  <source src="foo.wav" type="audio/wav" />
+  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
+</audio>
+</div>
+<div>
+  <audio controls>
+  <source src="foo.opus" type="audio/ogg; codecs=opus" />
+  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="foo.mp3" type="audio/mpeg" />
+</audio>
+</div>
+</body>
+</html>
