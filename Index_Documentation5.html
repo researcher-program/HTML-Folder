@@ -142,5 +142,58 @@ elem.audioTrackList.onremovetrack = (event) => {
   <source src="foo.mp3" type="audio/mpeg" />
 </audio>
 </div>
+
+    <br>
+    or,
+    <br>
+
+<div>
+<audio controls>
+  <source src="foo.opus" type="audio/ogg; codecs=opus" />
+  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="foo.mp3" type="audio/mpeg" />
+</audio>
+    
+</div>
+    <div>
+<audio controls>
+  <source src="foo.wav" type="audio/wav" />
+</audio><br>
+
+<a href="foo.wav" download="foo.wav">Download WAV audio</a>.
+        
+    </div>
+<div>
+<!-- Basic audio playback -->
+<audio src="AudioTest.ogg" autoplay controls>
+  
+</audio><br>
+<a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>
+    
+</div>
+<div>
+    <audio controls>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  
+</audio>
+<p>
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
+  </p>
+</div>
+     <div>
+          <audio controls>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  
+</audio>
+<p>
+    Download <a href="myAudio.mp3" download="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
+  </p>
+     </div>
+
 </body>
+
 </html>
