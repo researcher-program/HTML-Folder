@@ -1,0 +1,187 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML~Aide_And_Audio_Tag</title>
+    <style>
+      body{
+        background-color: #000000;
+        color: aliceblue;
+        margin: 5%;
+      }
+    </style>
+</head>
+<body>
+ 
+  <h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~The Bring Attention To Element_Tag { All } </h1>
+
+  <p>
+    The <mark> b </mark> <u> HTML </u> element is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance. This was formerly known as the Boldface element, and most browsers still draw the text in boldface. However, you should not use <mark> b </mark> for styling text or granting importance. If you wish to create boldface text, you should use the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-weight">font-weight</a> property. If you wish to indicate an element is of special importance, you should use the <mark> strong </mark> element.
+  </p>
+
+  <div>
+    <p>
+  The two most popular science courses offered by the school are
+  <b class="term">chemistry</b> (the study of chemicals and the composition of
+  substances) and <b class="term">physics</b> (the study of the nature and
+  properties of matter and energy).
+</p>
+
+<style>
+  b {
+  /* Add your styles here */
+  font-family: sans-serif;
+  color: #6d95bd;
+  background-color: #a908b8;
+}
+</style>
+
+  </div>
+
+  <div>
+    <p>
+  This article describes several <b class="keywords">text-level</b> elements. It
+  explains their usage in an <b class="keywords">HTML</b> document.
+</p>
+
+Keywords are displayed with the default style of the
+<b>element, likely in bold.</b>
+  </div>
+  
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~The Document Base URL Element_Tag { All } </h1>
+<p>
+  The <mark> base </mark> <u> HTML </u> element specifies the base URL to use for all relative URLs in a document. There can be only one <mark> base </mark> element in a document.
+</p>
+
+<p>
+  A document's used base URL can be accessed by scripts with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI">Node.baseURI.</a> If the document has no <mark> base </mark> elements, then <mark> baseURI </mark> defaults to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href">location.href.</a>
+</p>
+
+<p 
+style="font-size: 30px;">
+<strong>Warning:</strong>
+</p>
+<p 
+style="background-color: #e41010;">
+ A <mark> base </mark> element must have an <mark> href </mark> attribute, a <mark> target </mark> attribute, or both. If at least one of these attributes are specified, the <mark> base </mark> element <strong> must </strong> come before other elements with attribute values that are URLs, such as a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link">link</a> 's href attribute.
+</p>
+
+<div>
+  <meta property="og:image" content="https://example.com/thumbnail.jpg" />
+
+  <base href="https://www.example.com/" />
+  <base target="_blank" />
+  <base target="_top" href="https://example.com/" />
+
+</div>
+<h1 
+style="background-color: #6d95bd;
+color: rgb(49, 19, 105);
+text-align: center;
+border-radius: 20px 1px;"
+> HTML ~The Bidirectional Text Override Element_Tag { All } 
+</h1>
+<p>
+  The <mark> bdo </mark> <u> HTML </u> element overrides the current directionality of text, so that the text within is rendered in a different direction.
+</p>
+<div>
+  <h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+<style>
+  html {
+  font-family: sans-serif;
+}
+
+bdo {
+  /* Add your styles here */
+   font-family: sans-serif;
+  color: #6d95bd;
+  background-color: #a908b8;
+}
+</style>
+</div>
+
+<div>
+  <!-- Switch text direction -->
+<p>This text will go left to right.</p>
+<p><bdo dir="rtl">This text will go right to left.</bdo></p>
+</div>
+<h1 
+style="background-color: #6d95bd;
+color: rgb(49, 19, 105);
+text-align: center;
+border-radius: 20px 1px;"
+> HTML ~The Bidirectional Isolate Element_Tag { All } 
+</h1>
+<p>
+  The <mark> bdi </mark> <u> HTML </u> element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text. It's particularly useful when a website dynamically inserts some text and doesn't know the directionality of the text being inserted.
+</p>
+<div>
+  <h1>World Wrestling Championships</h1>
+
+<ul>
+  <li>
+    <bdi class="name">Evil Steven</bdi>: 1st place
+  </li>
+  <li>
+    <bdi class="name">François fatale</bdi>: 2nd place
+  </li>
+  <li>
+    <span class="name">سما</span>: 3rd place
+  </li>
+  <li>
+    <bdi class="name">الرجل القوي إيان</bdi>: 4th place
+  </li>
+  <li>
+    <span class="name" dir="auto">سما</span>: 5th place
+  </li>
+</ul>
+<style>
+  html {
+  font-family: sans-serif;
+}
+
+bdi {
+  /* Add your styles here */
+  font-family: sans-serif;
+  color: #6d95bd;
+  background-color: #a908b8;
+}
+
+.name {
+  color: rgb(170, 214, 12);
+}
+</style>
+</div>
+<div>
+  <ul>
+  <li><span class="name">Henrietta Boffin</span> - 1st place</li>
+  <li><span class="name">Jerry Cruncher</span> - 2nd place</li>
+</ul> 
+</div>
+<div>
+  <ul>
+  <li><span class="name">اَلأَعْشَى</span> - 1st place</li>
+  <li><span class="name">Jerry Cruncher</span> - 2nd place</li>
+</ul>
+</div>
+<div>
+  <ul>
+  <li><bdi class="name">اَلأَعْشَى</bdi> - 1st place</li>
+  <li><bdi class="name">Jerry Cruncher</bdi> - 2nd place</li>
+</ul>
+</div>
+</body>
+</html>
