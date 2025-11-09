@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML~Aide_And_Audio_Tag</title>
+    <style>
+      body{
+        background-color: #000000;
+        color: aliceblue;
+        margin: 5%;
+      }
+    </style>
+</head>
+<body>
+ 
+  <h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~The Bigger Text Element_Tag { All } </h1>
+
+  <p style="background-color: #a908b8;
+  color: aliceblue;">
+    <span style="font-size: 20px;">
+      Deprecated
+    </span>
+   : This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/big#browser_compatibility">compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+  </p>
+  <p>
+    The <mark> big </mark> <u> HTML </u> deprecated element renders the enclosed text at a font size one level larger than the surrounding text (<mark>medium</mark> becomes <mark> large </mark>, for example). The size is capped at the browser's maximum permitted font size.
+  </p>
+
+  <p style="background-color: #e41010;
+  color: aliceblue;">
+    <span style="font-size: 20px;">
+      Warning
+    </span>
+    : This element has been removed from the specification and shouldn't be used anymore. Use the CSS font-size property to adjust the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-size">font size</a>.
+  </p>
+  <div>
+   <p>
+  This is the first sentence.
+  <big>This whole sentence is in bigger letters.</big>
+</p>
+  </div>
+
+  <div>
+    <style>
+      .bigger {
+  font-size: larger;
+}
+    </style>
+    <p>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
+</p>
+  </div>
+  
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~The Block Quotation Element_Tag { All } </h1>
+<p>
+  The <mark> blockquote </mark> <u> HTML </u> element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote#usage_notes">Notes</a> for how to change it). A URL for the source of the quotation may be given using the <mark> cite </mark> attribute, while a text representation of the source can be given using the <mark> cite </mark> element.
+</p>
+
+<div>
+<style>
+  div:has(> blockquote) {
+  background-color: #ededed;
+  color: #000000;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+</style>
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+</div>
+
+<div>
+  <blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+  <p>
+    Avian carriers can provide high delay, low throughput, and low altitude
+    service. The connection topology is limited to a single point-to-point path
+    for each carrier, used with standard carriers, but many carriers can be used
+    without significant interference with each other, outside early spring. This
+    is because of the 3D ether space available to the carriers, in contrast to
+    the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    avoidance system, which increases availability.
+  </p>
+</blockquote>
+</div>
+
+<h1 
+style="background-color: #6d95bd;
+color: rgb(49, 19, 105);
+text-align: center;
+border-radius: 20px 1px;"
+> HTML ~The Line Break Element_Tag { All } 
+</h1>
+<p>
+  The <mark> br </mark> <u> HTML </u> element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
+</p>
+<div>
+  
+
+<style>
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+</style>
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+</div>
+
+<div>
+  Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
+</div>
+
+<h1 
+style="background-color: #6d95bd;
+color: rgb(49, 19, 105);
+text-align: center;
+border-radius: 20px 1px;"
+> HTML ~The Button Element_Tag { All } 
+</h1>
+<p>
+  The <mark> button </mark> <u> HTML</u> element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a <a href=" https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">form</a> or opening a dialog.
+
+By default, HTML buttons are presented in a style resembling the platform the <a href="https://developer.mozilla.org/en-US/docs/Glossary/User_agent"> user agent </a> runs on, but you can change buttons' appearance with <u> CSS</u>.
+</p>
+
+<div>
+<style>
+ .styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  background-color: tomato;
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 0.2),
+    rgb(0 0 0 / 0.2) 30%,
+    transparent
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+    cursor: pointer;
+}
+
+.styled:hover {
+  background-color: red;
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+</style>
+<button class="favorite styled" type="button">Add to favorites</button>
+</div>
+
+<br />
+
+<div>
+  <style>
+    button{
+      cursor: pointer;
+    }
+  </style>
+  <button name="favorite">
+  <svg fill="black" viewBox="0 0 42 42">
+    <path
+      d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
+      3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
+      2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
+  </svg>
+  Add to favorites
+</button>
+</div>
+
+<br />
+
+<div>
+  <style>
+.arafat{
+  cursor: pointer;
+}
+  </style>
+  <button class="arafat" type="button" name="button">I'm a button</button>
+</div>
+
+<br />
+
+<div>
+  <style>
+   .wrapper{
+    cursor: pointer;
+   }
+  </style>
+<button type="button" commandfor="mydialog" command="show-modal">
+  Open Dialog
+</button>
+<dialog id="mydialog">
+  <div class="wrapper">
+    <form>
+      <fieldset>
+        <legend>Allow this dialog to close when requested?</legend>
+        <div>
+          <input type="radio" id="no" name="close" value="no" checked />
+          <label for="no">No</label>
+        </div>
+        <div>
+          <input type="radio" id="yes" name="close" value="yes" />
+          <label for="yes">Yes</label>
+        </div>
+      </fieldset>
+    </form>
+    <button commandfor="mydialog" command="request-close">
+      Request to Close
+    </button>
+    <p class="warning" hidden>You must choose "Yes" to close this dialog.</p>
+  </div>
+</dialog>
+<script>
+  const dialog = document.querySelector("dialog");
+const radio = document.querySelector("form").elements["close"];
+const warning = document.querySelector(".warning");
+
+dialog.addEventListener("cancel", (e) => {
+  if (!e.cancelable) return;
+  if (radio.value === "no") {
+    warning.hidden = false;
+    e.preventDefault();
+  } else {
+    warning.hidden = true;
+  }
+});
+</script>
+</div>
+
+</body>
+</html>
