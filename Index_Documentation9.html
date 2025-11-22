@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+body{
+  background-color: #000514;
+  color: aliceblue;
+}
+.arafat{
+  background-color: #112f94;
+        color: aliceblue;
+        padding: 1%;
+      }
+      .arfan{
+         background-color: #da0e0e;
+        color: aliceblue;
+        padding: 1%;
+      }
+      a{
+        background-color: #b0d3dde1;
+        color: #6a03e0;
+      }
+      li{
+        background-color: rgba(85, 83, 83, 0.233);
+        width: fit-content;
+        margin: 2%;
+        padding: 1%;
+      }
+    </style>
+</head>
+<body>
+ 
+  <h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~ The Graphics Canvas Element_Tag { All } </h1>
+<p>
+ Use the <strong>HTML <mark> &lt;canvas&gt; </mark>  element</strong> with either the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas scripting API</a> or the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</a> to draw graphics and animations.
+</p>
+<h2>Attributes</h2>
+<ol>
+  <li>height</li>
+  <li>width</li>
+  <li>moz-opaque : This is only supported by Mozilla-based browsers; use the standardized <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">canvas.getContext('2d', { alpha: false })</a> instead.</li>
+</ol>
+  <h2>Closing &lt;/canvas&gt; Tag  </h2>
+<p>
+  Unlike the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img">&lt;img&gt;</a> element, the &lt;canvas&gt; element requires the closing tag (&lt;/canvas&gt;).
+</p>
+  
+<div>
+<canvas width="120" height="120">
+  An alternative text describing what your canvas displays.
+</canvas>
+  <script>
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
+// Add a rectangle at (10, 10) with size 100x100 pixels
+ctx.fillRect(10, 10, 100, 100);
+  </script>
+</div>
+
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~ The Citation Element_Tag { All } </h1>
+<p>
+  The <mark>  &lt;cite&gt; </mark>  <u> HTML </u> element is used to mark up the title of a creative work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.
+</p>
+<div>
+  <style>
+    cite {
+  /* Add your styles here */
+  background-color: #3f0101;
+}
+  </style>
+  <figure>
+  <blockquote>
+    <p>
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+  </blockquote>
+  <figcaption>
+    First sentence in
+    <cite
+      ><a href="http://www.george-orwell.org/1984/0.html"
+        >Nineteen Eighty-Four</a
+      ></cite
+    >
+    by George Orwell (Part 1, Chapter 1).
+  </figcaption>
+</figure>
+</div>
+<div>
+  <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+</div>
+<h3 style="font-size: 20px;">Usage Notes</h3>
+<p>
+  In the context of the <mark> cite </mark> element, a creative work could be, for example, one of the following:
+</p>
+<ul>
+  <li> A Book </li>
+  <li> A Research Paper </li>
+  <li> An Essay </li>
+  <li> A Poem </li>
+  <li> A Musical Score </li>
+  <li> A Song </li>
+  <li> A Play or Film Script </li>
+  <li> A Film </li>
+  <li> A Television Show </li>
+  <li> A Game </li>
+  <li> A Sculpture </li>
+  <li> A Painting </li>
+  <li> A Theatrical Production </li>
+  <li> A Play </li>
+  <li> An Opera </li>
+  <li> A Musical </li>
+  <li> An Exhibition </li>
+  <li> A Legal Case Report </li>
+  <li> A Computer Program </li>
+  <li> A Website </li>
+  <li> A Web Page </li>
+  <li> A Blog Post or Comment </li>
+  <li> A Forum Post or Comment </li>
+  <li> A Tweet </li>
+  <li> A Facebook Post </li>
+  <li> A Writter or Oral Statement </li>
+  <li> And So Forth </li>
+</ul>
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~ The Inline Code Element_Tag { All } </h1>
+<p>
+  The &lt;code&gt; <a href="">HTML</a> element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the <a href=""> user agent's </a>default monospace font.
+</p>
+
+<div>
+  <style>
+code {
+  background-color: #68161665;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  padding: 0 3px;
+}
+  </style>
+  <p>
+  The <code>push()</code> method adds one or more elements to the end of an
+  array and returns the new length of the array.
+</p>
+</div>
+<div>
+  <p>
+  The function <code>selectAll()</code> highlights all the text in the input
+  field so the user can, for example, copy or delete the text.
+</p>
+</div>
+
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~ The Deleted Text Element_Tag { All } </h1>
+<p>
+  The &lt; del &gt; <u> HTML </u> element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The &lt; ins &gt; element can be used for the opposite purpose: to indicate text that has been added to the document.
+</p>
+
+<div>
+<style>
+del {
+  text-decoration: line-through;
+  background-color: #e4cd03;
+  color: #da0404e1;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #31581a;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+</style>
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+</div>
+<p style="font-size: 25px;"> Attributes </p>
+<ul>
+  <li> cite </li>
+  <li> datetime </li>
+</ul>
+
+<div>
+  <style>
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+  </style>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+<del><p>This paragraph has been deleted.</p></del>
+</div>
+
+<h1 style="background-color: #6d95bd;color: rgb(49, 19, 105);text-align: center;border-radius: 20px 1px;"> HTML ~ The Directory Element_Tag { All } </h1>
+
+<p style="background-color: #3f0101;
+padding:1%;">
+  <strong>
+ Deprecated :
+</strong>
+This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dir#browser_compatibility">compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+</p>
+<p>
+  The &lt; dir &gt; <u> HTML </u> element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the <u> user agent </u>. Do not use this obsolete element; instead, you should use the &lt; ul &gt; element for lists, including lists of files.
+</p>
+<p style="background-color: #3f0101;
+padding:1%;">
+<strong>
+ Warning :
+</strong>
+Do not use this element. Though present in early HTML specifications, it has been deprecated in HTML 4, and has since been removed entirely.
+</p>
+</body>
+</html>
